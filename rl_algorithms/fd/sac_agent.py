@@ -21,6 +21,8 @@ from rl_algorithms.common.buffer.wrapper import PrioritizedBufferWrapper
 import rl_algorithms.common.helper_functions as common_utils
 from rl_algorithms.registry import AGENTS, build_learner
 from rl_algorithms.sac.agent import SACAgent
+import pdb
+
 
 
 @AGENTS.register_module
@@ -45,6 +47,7 @@ class SACfDAgent(SACAgent):
             with open(self.hyper_params.demo_path, "rb") as f:
                 demos = pickle.load(f)
 
+                #pdb.set_trace()
             if self.use_n_step:
                 demos, demos_n_step = common_utils.get_n_step_info_from_demo(
                     demos, self.hyper_params.n_step, self.hyper_params.gamma
@@ -154,8 +157,8 @@ class SACfDAgent(SACAgent):
             t_begin = time.time()
 
             while not done:
-                if self.is_render and self.i_episode >= self.render_after:
-                    self.env.render()
+                #if self.is_render and self.i_episode >= self.render_after:
+                    #self.env.render()
 
                 action = self.select_action(state)
                 next_state, reward, done, _ = self.step(action)

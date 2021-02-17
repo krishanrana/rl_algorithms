@@ -183,7 +183,7 @@ class SACAgent(Agent):
                     "vf loss": loss[3],
                     "alpha loss": loss[4],
                     "time per each step": avg_time_cost,
-                }
+                }, self.total_step
             )
 
     # pylint: disable=no-self-use, unnecessary-pass
