@@ -21,7 +21,7 @@ agent = dict(
         auto_entropy_tuning=True,
         # fD
         n_step=3,
-        pretrain_step=1000000,
+        pretrain_step=100000,
         lambda1=1.0,  # N-step return weight
         demo_path="data/pointgoalnav_demo_2.pkl",
         # lambda2 = weight_decay
