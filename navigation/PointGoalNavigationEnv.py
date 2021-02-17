@@ -77,10 +77,10 @@ class PointGoalNavigation:
         #-----------------------------------------------------------------------------------------------------------------------------------------------#
         # ENV 0: Bug Trap
         if self.env_type == 0:
-            barrier_top  = self.world.CreateStaticBody(position=(0, 0.3), shapes=b2PolygonShape(box=(0.3, 0.025)))
-            barrier_bottom = self.world.CreateStaticBody(position=(0, -0.3), shapes=b2PolygonShape(box=(0.3, 0.025)))
-            barrier_mid   = self.world.CreateStaticBody(position=(     0.3, 0.0), shapes=b2PolygonShape(box=(0.025, 0.3)))
-            self.barrier_walls = [barrier_top, barrier_bottom, barrier_mid]
+            #barrier_top  = self.world.CreateStaticBody(position=(0, 0.3), shapes=b2PolygonShape(box=(0.3, 0.025)))
+            #barrier_bottom = self.world.CreateStaticBody(position=(0, -0.3), shapes=b2PolygonShape(box=(0.3, 0.025)))
+            #barrier_mid   = self.world.CreateStaticBody(position=(     0.3, 0.0), shapes=b2PolygonShape(box=(0.025, 0.3)))
+            self.barrier_walls = []
         #-----------------------------------------------------------------------------------------------------------------------------------------------#
         # ENV 1: Randomly changing boxes
         if self.env_type == 1:
